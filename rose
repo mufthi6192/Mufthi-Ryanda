@@ -4,6 +4,7 @@ Build Date : 16-01-2020
 Relase Date : Unknown
 Publish Date : Unknown
 Script Status : On Going (Betta)
+Language : English
 */
 
 #include <SoftwareSerial.h> 
@@ -22,11 +23,11 @@ void loop()
 {
   if(Serial.available() > 0)  
   {
-    data = Serial.read();Serial.print(data);    //Pembacaan dan ditampilkan data yang masuk   
+    data = Serial.read();Serial.print(data);    //Reader and show the reciever code
     Serial.print("\n"); 
-    //Data yang masuk      
+    //Recieving Code     
     if(data == '0'){
-    digitalWrite(8, HIGH); //diberikan waktu tunda 1 detik
+    digitalWrite(8, HIGH); //Delay Time
     }
     else if(data == '1'){      
     digitalWrite(8, LOW); 
