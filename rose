@@ -1,0 +1,141 @@
+/*
+Recode By : Mufthi Ryanda
+Build Date : 16-01-2020
+Relase Date : Unknown
+Publish Date : Unknown
+Script Status : On Going (Betta)
+*/
+
+#include <SoftwareSerial.h> 
+SoftwareSerial module_bluetooth(0, 1); // pin RX | TX
+ 
+char data = 0;             
+void setup() 
+{
+  Serial.begin(9600);         
+  pinMode(8, OUTPUT);  
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+void loop()
+{
+  if(Serial.available() > 0)  
+  {
+    data = Serial.read();Serial.print(data);    //Pembacaan dan ditampilkan data yang masuk   
+    Serial.print("\n"); 
+    //Data yang masuk      
+    if(data == '0'){
+    digitalWrite(8, HIGH); //diberikan waktu tunda 1 detik
+    }
+    else if(data == '1'){      
+    digitalWrite(8, LOW); 
+    } 
+    else if(data == '2'){      
+    digitalWrite(9, HIGH); 
+    } 
+    else if(data == '3'){      
+    digitalWrite(9, LOW); 
+    }
+    else if(data == '4'){      
+    digitalWrite(10, HIGH); 
+    }
+    else if(data == '5'){      
+    digitalWrite(10, LOW); 
+    }
+    else if(data == '6'){      
+    digitalWrite(11, HIGH); 
+    }
+    else if(data == '7'){      
+    digitalWrite(11, LOW); 
+    }
+     else if(data == '8'){      
+    digitalWrite(8, LOW); 
+    digitalWrite(9, LOW);
+    digitalWrite(10, LOW);
+    digitalWrite(11, LOW);
+  }      
+  else if(data == '9'){      
+    digitalWrite(8, HIGH); 
+    delay(100);
+    digitalWrite(8, LOW);
+    delay(100);
+    digitalWrite(9, HIGH);
+    delay(100);
+    digitalWrite(9, LOW);
+    delay(100);
+    digitalWrite(10, HIGH);
+    delay(100);
+    digitalWrite(10, LOW);
+    delay(100);
+    digitalWrite(11, HIGH);
+    delay(100);
+    digitalWrite(11, LOW);
+    delay(100);
+        digitalWrite(8, HIGH); 
+    delay(100);
+    digitalWrite(8, LOW);
+    delay(100);
+    digitalWrite(9, HIGH);
+    delay(100);
+    digitalWrite(9, LOW);
+    delay(100);
+    digitalWrite(10, HIGH);
+    delay(100);
+    digitalWrite(10, LOW);
+    delay(100);
+    digitalWrite(11, HIGH);
+    delay(100);
+    digitalWrite(11, LOW);
+    delay(100);
+    digitalWrite(8, HIGH); 
+    delay(100);
+    digitalWrite(8, LOW);
+    delay(100);
+    digitalWrite(9, HIGH);
+    delay(100);
+    digitalWrite(9, LOW);
+    delay(100);
+    digitalWrite(10, HIGH);
+    delay(100);
+    digitalWrite(10, LOW);
+    delay(100);
+    digitalWrite(11, HIGH);
+    delay(100);
+    digitalWrite(11, LOW);
+    delay(100);
+    digitalWrite(8, HIGH); 
+    delay(100);
+    digitalWrite(8, LOW);
+    delay(100);
+    digitalWrite(9, HIGH);
+    delay(100);
+    digitalWrite(9, LOW);
+    delay(100);
+    digitalWrite(10, HIGH);
+    delay(100);
+    digitalWrite(10, LOW);
+    delay(100);
+    digitalWrite(11, HIGH);
+    delay(100);
+    digitalWrite(11, LOW);
+    delay(100);
+    digitalWrite(8, HIGH); 
+    delay(100);
+    digitalWrite(8, LOW);
+    delay(100);
+    digitalWrite(9, HIGH);
+    delay(100);
+    digitalWrite(9, LOW);
+    delay(100);
+    digitalWrite(10, HIGH);
+    delay(100);
+    digitalWrite(10, LOW);
+    delay(100);
+    digitalWrite(11, HIGH);
+    delay(100);
+    digitalWrite(11, LOW);
+    delay(100);
+  }                            
+ 
+}}
